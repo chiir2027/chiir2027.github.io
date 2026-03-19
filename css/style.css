@@ -85,6 +85,11 @@ p {
 	margin: 0 0 15px 0;
 }
 
+td,th {
+	font-family: "Work Sans", sans-serif;
+	color: #6a6b7c;
+}
+
 img {
 	max-width: 100%;
 }
