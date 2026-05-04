@@ -7,7 +7,7 @@
     <meta name="keywords" content="Manup, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CHIIR 2027 - Organizing Team</title>
+    <title>CHIIR 2027 - Keynote Speakers</title>
     <style>
         a {
             color: #1a0dab;
@@ -37,6 +37,14 @@
         .section:last-child {
             border-bottom: none;
         }
+        .section img {
+            width: auto !important;
+            height: 120px !important; 
+            border-radius: 20% !important;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
         h2 {
             text-align: center;
             font-size: 18px;
@@ -58,16 +66,221 @@
             margin-bottom: 15px;
         }
         .person img {
-            width: 100px;
-            height: 100px;
+            width: 100%;
+            max-width: 120px;
+            height: auto;
             border-radius: 50%;
-            margin-right: 15px;
         }
         .person-info {
             font-size: 14px;
         }
         .person-info strong {
             font-weight: bold;
+        }
+
+         /* Keynote Styles */
+        .keynote-card {
+            margin-bottom: 50px;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        #keynote1 {
+            background: #f6faff;
+        }
+        
+        #keynote2 {
+            background: #f8f9fa;
+        }
+
+        .keynote-ben-row {
+            margin-bottom: 50px;
+            justify-content: flex-start;
+        }
+
+        .keynote-ben-row .keynote-main-col {
+            padding-right: 8px;
+        }
+
+        @media (min-width: 992px) {
+            .keynote-ben-row .keynote-main-col {
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+            .keynote-ben-row .keynote-video-col {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                padding-left: 12px;
+                padding-top: 4px;
+            }
+        }
+
+        .keynote-video-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .keynote-video-col .keynote-video-embed {
+            max-width: 340px;
+            width: 100%;
+        }
+
+        @media (max-width: 991px) {
+            .keynote-video-col {
+                margin-top: 1rem;
+            }
+        }
+
+        .keynote-video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 18px rgba(10, 61, 98, 0.12);
+            background: #111;
+        }
+
+        .keynote-video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .keynote-video-label {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .keynote-video-col .keynote-video-label {
+            max-width: 340px;
+        }
+
+        .keynote-header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .keynote-header img {
+            width: auto !important;
+            height: 150px !important; 
+            border-radius: 20% !important;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+            object-position: center;
+            flex-shrink: 0;
+        }
+        
+        .keynote-info h3 {
+            margin: 0 0 10px 0;
+            color: #0A3D62;
+            font-size: 24px;
+        }
+        
+        .keynote-info h3 a {
+            color: #0A3D62;
+            text-decoration: none;
+        }
+        
+        .keynote-info h3 a:hover {
+            color: #007bff;
+        }
+        
+        .keynote-info p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .keynote-title {
+            color: #0A3D62;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .keynote-title-label {
+            color: #666;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .keynote-bio {
+            padding: 0 20px;
+        }
+        
+        .keynote-bio.expanded {
+            max-height: 2000px;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        
+        .keynote-bio p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .keynote-bio p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .expand-btn {
+            background: #0A3D62;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .expand-btn:hover {
+            background: #007bff;
+            transform: translateY(-2px);
+        }
+        
+        .expand-btn.expanded {
+            background: #6c757d;
+        }
+        
+        .expand-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .expand-btn.expanded i {
+            transform: rotate(180deg);
+        }
+        
+        .tbd-notice {
+            background: #f8f9fa;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            color: #856404;
+            font-style: italic;
+            text-align: center;
         }
     </style>
 
@@ -120,7 +333,7 @@
                         <li class="active">
                             <a href="#">Program</a>
                             <ul class="dropdown" style="min-width: max-content; white-space: nowrap;">
-                                <li><a href="./keynote-speakers.html">Keynote Speakers</a></li>
+                                <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Sponsors</a>
@@ -142,7 +355,7 @@
      <!-- Hero Section Begin -->
     <section class="hero-section" 
     style="position: relative; 
-           background-image: url('img/2.jpg') !important; 
+           background-image: url('img/hero-sections-bg/1.jpg') !important; 
            background-size: cover !important; 
            background-repeat: no-repeat !important; 
            background-position: center center !important; 
@@ -166,7 +379,7 @@
     <!-- Content (Ensuring it's above the overlay) -->
     <div style="position: relative; z-index: 2;">
         <h2 style="color: white !important; font-family: 'Pauta One', sans-serif; font-weight: bold;">
-            Organizing Team
+            Chiir 2027 Keynote Speakers
         </h2> 
     </div>
 </section>
@@ -215,106 +428,32 @@
 
     <!-- Home About Section Begin -->
     <section class="home-about-section spad">
-        <div class="container">
+         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ha-text">
-                        <p>The 2026 ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR – pronounced “cheer”) will take place in Seattle, WA, USA, between 22 and 26 March 2026. </p>
-
-                        <p>ACM SIGIR CHIIR 2026 invites submissions focused on user-centered approaches to designing and evaluating systems for information access, seeking, retrieval, and use. Contributions may explore improvements to existing systems and interfaces; propose novel theories, models, and systems; or focus on understanding individual and group interactions with information and information systems.</p>
-                        <p>CHIIR is a multi-disciplinary research meeting. In addition to studies of interactive systems, information interaction, and retrieval, we encourage submissions on related topics, including human-human information interaction, novel interaction paradigms, new evaluation methods, and related research in a range of communities such as sociology, education, ethnography, psychology, human-computer interaction, and other relevant disciplines.</p>              
-                        <p>CHIIR 2026 will be held in person to enhance community building and foster meaningful discussions. </p>
+                        <p id="keynotes" style="text-align: center; color: #666; font-size: 24px; margin-bottom: 40px;">Distinguished speakers who will share their insights at CHIIR 2027</p>
                     </div>
-<p>&nbsp;</p>
-                    <div>
-                          <h2>Important Dates</h2>
-                          <ul style="margin-left: 30px; line-height: 1.8;">
-                            <li>Will be announced.</li>
-                          </ul>
-                          <p><em>All deadlines are at 23:59 Anywhere on Earth</em></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Keynote Speaker 1: Ben Shneiderman + video -->
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 keynote-main-col">
+                            <div class="keynote-card" id="keynote1">
+                                <div class="keynote-header">
+                                    <img src="img/speakers/lorenz-spreen.png" alt="Philipp Lorenz-Spreen">
+                                    <div class="keynote-info">
+                                        <h3>Philipp Lorenz-Spreen</h3>
+                                        <p>Technische Universität Dresden, Germany</p>
+                                    </div>
+                                </div>
+                                <div class="keynote-bio">
+                                    <p>Philipp Lorenz-Spreen is leading the research group “Computational Social Science” at the Center Synergy of Systems at TU Dresden. He has also been conducting research at the Max Planck Institute for Human Development since completing his Ph.D. in theoretical physics at TU Berlin, where he studied the dynamics of collective attention. His research focuses on the complexity of self-organized online discourse and its impact on democracies worldwide. His goal is to better understand the interplay between human behavior and the connectivity and functioning of online platforms, particularly how this affects public discourse. However, he also aims to challenge the status quo and explore how this technology offers untapped opportunities for an improved information ecosystem and participatory democracy in the online sphere.</p>
+                                </div>
+                            </div>
                         </div>
-
-<p>&nbsp;</p>
-                    <div>
-                        <h2>Submission Types</h2>
-    
-  <p>We welcome submissions on a range of quantitative and qualitative research methods. Topics covered include, but are not limited to:</p>
-<ul style="list-style-type: disc; padding-left: 40px; margin-left: 0;">
-  <li style="display: list-item;">Information seeking, including task-based and exploratory studies</li>
-  <li style="display: list-item;">Search interfaces, including those for specialised tasks, populations, and domains</li>
-  <li style="display: list-item;">Information access methods and systems for users of all abilities</li>
-  <li style="display: list-item;">Information interactions beyond search</li>
-  <li style="display: list-item;">User-centered design approaches to humans interacting with information and systems</li>
-  <li style="display: list-item;">Interaction techniques for information retrieval and discovery</li>
-  <li style="display: list-item;">Online information seeking, including log analysis of search and browsing</li>
-  <li style="display: list-item;">Modelling and simulation of information interaction</li>
-  <li style="display: list-item;">Quantitative and qualitative studies of human information interaction</li>
-  <li style="display: list-item;">Information seeking and use behaviours, including measures of use and broader sensemaking</li>
-  <li style="display: list-item;">Field and case studies of information searching, design, and access</li>
-  <li style="display: list-item;">User-centered evaluation methods and measures, including online, lab-based and situated measures of user experience and performance, experiment and search task design, eye-tracking and neuro-physiological approaches, data analysis methods, and usability</li>
-  <li style="display: list-item;">Human interaction and experience with conversational information systems and other types of stateful and multi-turn interactions between users and search applications</li>
-  <li style="display: list-item;">Context-aware and personalised search, including design, contextual features and analysis of information interaction</li>
-  <li style="display: list-item;">Information visualisation and visual analytics, including search result presentation</li>
-  <li style="display: list-item;">Enabling and studying multi-modal interactions with information, including augmented and virtual reality interfaces</li>
-  <li style="display: list-item;">Collaborative information seeking and social search, including social utility and network analysis for information interaction</li>
-  <li style="display: list-item;">Insights and analyses related to human experiences and usage trends with recommendation technologies</li>
-  <li style="display: list-item;">Information interaction and seeking with mobile devices and services</li>
-  <li style="display: list-item;">Studies of the usage of generative AI for information interaction and retrieval</li>
-  <li style="display: list-item;">Information interaction and retrieval in the context of Digital Humanities</li>
-  <li style="display: list-item;">Ethical and societal aspects of information access</li>
-  <li style="display: list-item;">Gamification in interactive information retrieval</li>
-</ul>
-<p>&nbsp;</p>
-                      <p>
-                        CHIIR 2026 will accept submissions of the following types: 
-                        <a href="full-paper.html"><strong>full papers</strong></a>, 
-                        <a href="short-paper.html"><strong>short papers</strong></a>,
-                        <a href="resource-papers.html"><strong>resource papers</strong></a>,
-                        <a href="perspective-paper.html"><strong>perspective papers</strong></a>,
-                        <a href="demo-paper.html"><strong>demonstration papers</strong></a>, 
-                        <a href="tutorials.html"><strong>tutorials</strong></a>,
-                        <a href="workshops.html"><strong>workshops</strong></a>, 
-                        <a href="dc-paper.html"><strong>doctoral consortium papers</strong></a>.
-                      </p>
-                      <p>&nbsp;</p>
-                      <p>
-                        We will use the <a href="https://www.acm.org/publications/taps/word-template-workflow">TAPS-based ACM workflow</a>. 
-                        Overall instructions are at this link. Specific requirements for each submission type are provided on their respective pages.
-                      </p>
-                        <p>
-                        You can submit papers that you have posted to archival platforms (e.g. arXiv), or plan to post in the future, after submission. However, your paper must conform to the specifications outlined <a href="arxiv-policy.html" target="_blank">here</a>.
-
-                    </p>
-                    </div>
-<p>&nbsp;</p>
-                    <div>
-                        <h2>Policy Against Discrimination</h2>
-                      <p>
-                        ACM CHIIR operates under the 
-                        <a href="https://www.acm.org/special-interest-groups/volunteer-resources/conference-code-of-conduct">
-                          ACM Conference Code of Conduct
-                        </a>.
-                      </p>
-<p>&nbsp;</p>
-                      <h2 id="sponsors">Sponsors</h2>
-                      
-                      <!-- Platinum Sponsor -->
-                      <div style="text-align: center; margin: 30px 0;">
-                          <h3 style="color: #C0C0C0; margin-bottom: 20px;">Platinum Sponsor</h3>
-                          <div style="display: flex; justify-content: center; align-items: center;">
-                              <img src="img/partner-logo/Microsoft-logo_rgb_c-gray.png" alt="Microsoft" style="height: 200px; max-width: 400px;">
-                          </div>
-                      </div>
-                      
-                      <!-- Conference Partners -->
-                      <div style="text-align: center; margin: 30px 0;">
-                          <h3 style="color: #666; margin-bottom: 20px;">Conference Partners</h3>
-                          <div style="display: flex; justify-content: center; align-items: center; gap: 30px;">
-                              <img src="img/ACM.png" alt="ACM Logo" style="height: 100px;">
-                              <img src="img/sigir.jpg" alt="SIGIR Logo" style="height: 100px;">
-                          </div>
-                      </div>
-                                       
                     </div>
                 </div>
             </div>
