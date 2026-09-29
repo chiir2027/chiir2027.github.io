@@ -37,7 +37,7 @@ body {
 	height: 100%;
 	font-family: "Work Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	-moz-osxfont-smoothing: antialiased;
 }
 
 h1,
@@ -2504,13 +2504,13 @@ ol {
 	}
 	a {
 	color: #1a0dab; /* Default link blue */
-	text-decoration: none;}
+	text-decoration: none;
 }
 
 a:hover,
 a:focus {
 	color: #0b0080; /* Darker blue on hover */
-	text-decoration: none;
+	text-decoration: underline;
 }
 	ul, ol {
 	padding-left: 40px;
@@ -2527,6 +2527,7 @@ ul li, ol li {
 
 .about-text ul li {
 	list-style: disc;
+}
 }
 
 @media only screen and (max-width: 767px) {
